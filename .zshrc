@@ -2442,6 +2442,8 @@ if [[ -r /etc/debian_version ]] ; then
     alias dbp='dpkg-buildpackage'
     #a3# Execute \kbd{grep-excuses}
     alias ge='grep-excuses'
+    #a3# Execute \kbd{apt-get dist-upgrade}
+    salias aguu="apt-get update && apt-get dist-upgrade"
 
     # get a root shell as normal user in live-cd mode:
     if isgrmlcd && [[ $UID -ne 0 ]] ; then
