@@ -3318,5 +3318,11 @@ zrclocal
 # mode: sh
 # End:
 
-bindkey "^[[5~" history-beginning-search-backward
-bindkey "^[[6~" history-beginning-search-forward
+# bindkey "^[[5~" history-beginning-search-backward
+# bindkey "^[[6~" history-beginning-search-forward
+
+if [[ -x /usr/lib/command-not-found ]] ; then
+        function command_not_found_handler() {
+                /usr/lib/command-not-found --no-failure-msg -- $1
+        }
+fi
