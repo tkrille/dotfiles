@@ -526,9 +526,9 @@ xsource "/etc/sysconfig/keyboard"
 TZ=$(xcat /etc/timezone)
 
 # set some variables
-if check_com -c nano ; then
+if check_com -c vim ; then
 #v#
-    export EDITOR=${EDITOR:-nano}
+    export EDITOR=${EDITOR:-vim}
 else
     export EDITOR=${EDITOR:-vi}
 fi
@@ -1451,7 +1451,7 @@ bind2maps emacs viins       -- -s '^x1' jump_after_first_word
 bind2maps emacs viins       -- -s "^x^x" hist-complete
 
 # insert unicode character
-# usage example: 'ctrl-x i' 00A7 'ctrl-x i' will give you an ยง
+# usage example: 'ctrl-x i' 00A7 'ctrl-x i' will give you an ง
 # See for example http://unicode.org/charts/ for unicode characters code
 #k# Insert Unicode character
 bind2maps emacs viins       -- -s '^xi' insert-unicode-char
@@ -2442,8 +2442,6 @@ if [[ -r /etc/debian_version ]] ; then
     alias dbp='dpkg-buildpackage'
     #a3# Execute \kbd{grep-excuses}
     alias ge='grep-excuses'
-    #a3# Execute \kbd{apt-get dist-upgrade}
-    salias aguu="apt-get update && apt-get dist-upgrade"
 
     # get a root shell as normal user in live-cd mode:
     if isgrmlcd && [[ $UID -ne 0 ]] ; then
@@ -3319,12 +3317,3 @@ zrclocal
 # Local variables:
 # mode: sh
 # End:
-
-# bindkey "^[[5~" history-beginning-search-backward
-# bindkey "^[[6~" history-beginning-search-forward
-
-if [[ -x /usr/lib/command-not-found ]] ; then
-        function command_not_found_handler() {
-                /usr/lib/command-not-found --no-failure-msg -- $1
-        }
-fi
