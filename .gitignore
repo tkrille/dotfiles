@@ -85,12 +85,11 @@ tarent
 .thumbnails
 .translate_toolkit
 .visualvm
-.xsession-errors
+.xsession*
 .zcompdump
 .zdirs
 .zenmap
 .zsh_history
-"Arbeitsfl\303\244che"
 Bilder
 Calibre Bibliothek
 Dokumente
@@ -103,5 +102,17 @@ Temp
 VirtualBox VMs
 Vorlagen
 Workspaces
-"\303\226ffentlich"
 .gvfs
+Git
+Projekte
+.qt
+.Xauthority
+.cola
+.compiz*
+.hplip
+.keystore
+.navit
+.pgadmin
+.pgpass
+.purple
+.pgadmin*
