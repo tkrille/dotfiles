@@ -116,3 +116,5 @@ Projekte
 .pgpass
 .purple
 .pgadmin*
+.gitk
+.viminfo
