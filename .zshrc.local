@@ -337,3 +337,20 @@ if [[ -x /usr/lib/command-not-found ]] ; then
                 /usr/lib/command-not-found --no-failure-msg -- $1
         }
 fi
+
+# Set up less 
+export PAGER=less	       # just in case we are on solaris
+export LESS="-deFgiMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
+# Format man pages for a wigth of 80 col no matter how wide the terminal
+export MANWIDTH=80
+
+if [ -f /usr/share/source-highlight/src-hilite-lesspipe.sh ]; then
+    # Debian / Ubuntu
+    LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+elif [ -f /usr/bin/src-hilite-lesspipe.sh ]; then
+    LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+fi
+
+alias cd..="cd .."
+alias xps='ps aucx | head -1; ps aucx | grep -i '
+
