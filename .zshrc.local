@@ -354,3 +354,6 @@ fi
 alias cd..="cd .."
 alias xps='ps aucx | head -1; ps aucx | grep -i '
 
+local hostnames
+hostnames=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
+zstyle ':completion:*:hosts' hosts $hostnames
