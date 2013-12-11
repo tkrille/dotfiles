@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh configuration.
+ Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -74,3 +74,5 @@ alias cd..="cd .."
 
 alias xps='ps aucx | head -1; ps aucx | grep -i '
 
+bindkey "^[[5~" history-beginning-search-backward
+bindkey "^[[6~" history-beginning-search-forward
