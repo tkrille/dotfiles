@@ -71,6 +71,7 @@ export MANWIDTH=${MANWIDTH:-80}
 export LESS="-deFgiMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
 
 alias cd..="cd .."
+alias jjs="rlwrap jjs"
 
 alias xps='ps aucx | head -1; ps aucx | grep -i '
 
