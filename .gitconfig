@@ -4,6 +4,8 @@
 [alias]
     rb = rebase
     fa = fetch --all
+    fu = fetch upstream
+    fo = fetch origin
     st = status -s -b
     ci = commit
     br = branch
