@@ -13,6 +13,7 @@
     df = diff
     dc = diff --cached
     lg = log -p
+    cp = cherry-pick
     who = shortlog -s --
     k = !gitk
     alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
