@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#
+# viget - loads content from an url (using curl) and opens it in vi(m)
+#
+# Usage:
+# 	viget URL
+#
+
+FILE_NAME=$(basename $1)
+
+curl $1 > ./$FILE_NAME
+vi ./$FILE_NAME
