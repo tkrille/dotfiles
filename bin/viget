@@ -10,4 +10,4 @@
 FILE_NAME=$(basename $1)
 
 curl $1 > ./$FILE_NAME
-vi ./$FILE_NAME
+vim ./$FILE_NAME
