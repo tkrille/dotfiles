@@ -54,17 +54,16 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
+# export EDITOR=nano
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-export EDITOR=nano
 
 export MANWIDTH=${MANWIDTH:-80}
 
