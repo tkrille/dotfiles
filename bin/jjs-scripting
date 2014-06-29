@@ -25,4 +25,4 @@ SCRIPT_FILE=$1
 
 shift
 
-/usr/bin/jjs -scripting ${SCRIPT_FILE} -- $@
+/usr/bin/env jjs -scripting ${SCRIPT_FILE} -- $@
