@@ -1,6 +1,8 @@
 [user]
     name = Thomas Krille
     email = tkrille@gmail.com
+[include]
+    path = .gitconfig.d/userdetails
 [alias]
     rb = rebase
     fa = fetch --all
