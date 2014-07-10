@@ -9,7 +9,7 @@
     fo = fetch origin
     st = status -s -b
     ci = commit
-    br = branch -av
+    br = branch
     co = checkout
     df = diff
     dc = diff --cached
