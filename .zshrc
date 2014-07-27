@@ -45,7 +45,7 @@ ZSH_THEME="afowler"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mvn command-not-found common-aliases cp debian extract gitignore sudo themes systemadmin vagrant docker heroku sbt)
+plugins=(git mvn command-not-found common-aliases cp debian extract gitignore sudo themes systemadmin vagrant docker heroku)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,10 +73,6 @@ alias cd..="cd .."
 alias jjs="rlwrap jjs"
 
 alias xps='ps aucx | head -1; ps aucx | grep -i '
-
-alias docker-remove-none-images="docker rmi $(docker images | grep '<none>' | awk '{print $3}')"
-alias docker-stop-all="docker stop $(docker ps -q)"
-alias docker-remove-all="docker rm $(docker ps -aq)"
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
