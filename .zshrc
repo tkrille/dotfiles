@@ -78,11 +78,5 @@ alias xps='ps aucx | head -1; ps aucx | grep -i '
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
 
-# mkdir, cd into it
-mkcd () {
-    mkdir -p "$*"
-    cd "$*"
-}
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
