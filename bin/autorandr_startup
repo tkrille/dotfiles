@@ -1,0 +1,3 @@
+#!/bin/sh
+
+(sleep 2; /usr/local/bin/autorandr --change --default default) &
