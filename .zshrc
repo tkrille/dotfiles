@@ -80,3 +80,9 @@ bindkey "^[[6~" history-beginning-search-forward
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+preexec () {
+  DATE=`date +"%H:%M:%S on %Y-%m-%d"`
+  C=$(($COLUMNS-24))
+  echo -e "\033[1A\033[${C}C ${DATE} "
+}
