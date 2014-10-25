@@ -1,2 +1,1 @@
-#JAVA_HOME=/usr/lib/jvm/java-7-oracle
-MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
+MAVEN_OPTS='-Xmx2048m -Xms512m -XX:PermSize=128m -XX:MaxPermSize=512m'
