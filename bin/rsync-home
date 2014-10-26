@@ -5,7 +5,7 @@ sudo cryptsetup luksOpen /dev/sdb1 ext-secure
 sudo mount /dev/mapper/ext-secure /mnt/ext-secure
 mkdir -p /mnt/ext-secure/thomas/
 
-rsync -r -t -p -o -g -x --exclude Temp/ --exclude .m2/repository/ --exclude .cache/ --progress --delete -l --partial --numeric-ids -s /home/thomas/ /mnt/ext-secure/thomas/
+rsync -r -t -p -o -g -x --exclude .cache/ --progress --delete -l --partial --numeric-ids -s /home/thomas/ /mnt/ext-secure/thomas/
 
 sync
 
