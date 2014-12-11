@@ -22,7 +22,8 @@
     alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
     aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
     loggraph = log --graph --decorate --pretty=oneline --abbrev-commit
-    ls = log --decorate --pretty=oneline --abbrev-commit
+    ls = log --decorate --pretty=oneline --abbrev-commit -20
+    lsa = log --decorate --pretty=oneline --abbrev-commit
     prune-all-remotes = !git remote | grep -iv 'upstream' | xargs git remote prune
 [color]
     ui = auto
