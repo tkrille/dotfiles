@@ -86,3 +86,6 @@ preexec () {
   C=$(($COLUMNS-24))
   echo -e "\033[1A\033[${C}C ${DATE} "
 }
+
+source /home/thomas/.rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
