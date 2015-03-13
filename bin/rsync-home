@@ -1,13 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash -xe
 
-sudo mkdir -p /mnt/ext-secure
-sudo cryptsetup luksOpen /dev/sdb1 ext-secure
-sudo mount /dev/mapper/ext-secure /mnt/ext-secure
-mkdir -p /mnt/ext-secure/thomas/
-
-rsync -r -t -p -o -g -x --exclude Archive/ --exclude Media/ --exclude Public/ --exclude .cache/ --progress --delete -l --partial --numeric-ids -s /home/thomas/ /mnt/ext-secure/thomas/
+rsync -r -t -p -o -g -x --exclude Archive/ --exclude Media/ --exclude Public/ --exclude .cache/ --exclude .gvfs/ --exclude .android/ --progress --delete -l --partial --numeric-ids -s /home/thomas/ /media/thomas/ext-secure/thomas/
 
 sync
 
-sudo umount /mnt/ext-secure
-sudo cryptsetup luksClose ext-secure
