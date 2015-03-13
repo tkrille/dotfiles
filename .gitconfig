@@ -12,7 +12,9 @@
     br = branch
     co = checkout
     coo = checkout origin/master
+    coom = checkout -B master origin/master
     cou = checkout upstream/master
+    coum = checkout -B master upstream/master
     df = diff
     dc = diff --cached
     lg = log -p
