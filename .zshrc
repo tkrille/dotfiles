@@ -93,3 +93,8 @@ if [ -f ~/.rvm/scripts/rvm ]; then
 fi
 
 export IDEA_JDK=/usr/lib/jvm/jdk-8u25-tuxjdk-b01
+
+if [ -d "$HOME/opt/go" ]; then
+  export GOROOT=$HOME/opt/go
+  export PATH=$PATH:$GOROOT/bin
+fi
