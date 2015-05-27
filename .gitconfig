@@ -26,7 +26,7 @@
     loggraph = log --graph --decorate --pretty=oneline --abbrev-commit
     ls = log --decorate --pretty=oneline --abbrev-commit -20
     lsa = log --decorate --pretty=oneline --abbrev-commit
-    prune-all-remotes = !git remote | grep -iv 'upstream' | xargs git remote prune
+    prune-all-remotes = !git remote | xargs git remote prune
 [color]
     ui = auto
 [color "branch"]
