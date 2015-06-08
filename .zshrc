@@ -67,7 +67,7 @@ fi
 
 export MANWIDTH=${MANWIDTH:-80}
 
-export LESS="-deFgiMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
+export LESS="-diMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
 
 alias cd..="cd .."
 alias ll="ls -hl"
