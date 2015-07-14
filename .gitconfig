@@ -13,10 +13,10 @@
     co = checkout
     coo = checkout origin/master
     coom = checkout -B master origin/master
-    fcoml = "!git fa; git coom; git ls"
+    fcoml = "!git fetch origin; git coom; git ls"
     cou = checkout upstream/master
     coum = checkout -B master upstream/master
-    fcuml = "!git fa; git coum; git ls"
+    fcuml = "!git fetch upstream; git coum; git ls"
     s = stash
     sp = stash pop
     df = diff
