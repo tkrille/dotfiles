@@ -98,3 +98,7 @@ if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
 fi
+
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
