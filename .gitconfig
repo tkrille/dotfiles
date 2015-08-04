@@ -58,3 +58,5 @@
     default = current
 [merge]
     tool = meld
+[rebase]
+	autosquash = true
