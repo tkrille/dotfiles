@@ -92,8 +92,6 @@ if [ -f ~/.rvm/scripts/rvm ]; then
   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
 
-export IDEA_JDK=/usr/lib/jvm/jdk-8u25-tuxjdk-b01
-
 if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
