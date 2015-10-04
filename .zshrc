@@ -92,6 +92,9 @@ if [ -d "$HOME/opt/go" ]; then
   export PATH=$PATH:$GOROOT/bin
 fi
 
+export DOCKER_HOST=tcp://localhost:2376
+export DOCKER_TLS_VERIFY=1
+
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
