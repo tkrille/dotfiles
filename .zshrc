@@ -45,7 +45,7 @@ ZSH_THEME="afowler"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github hub autojump mvn gradle command-not-found common-aliases cp debian extract gitignore sudo themes systemadmin vagrant docker heroku rsync python pip postgres grunt docker-compose)
+plugins=(git github hub autojump mvn gradle command-not-found common-aliases cp extract gitignore sudo themes systemadmin vagrant docker heroku rsync python pip postgres grunt docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,11 +87,6 @@ preexec () {
   echo -e "\033[1A\033[${C}C ${DATE} "
 }
 
-if [ -f ~/.rvm/scripts/rvm ]; then
-  source ~/.rvm/scripts/rvm
-  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-fi
-
 if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
@@ -100,10 +95,6 @@ fi
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-export GVM_DIR="/home/thomas/.gvm"
-[[ -s "/home/thomas/.gvm/bin/gvm-init.sh" ]] && source "/home/thomas/.gvm/bin/gvm-init.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/thomas/.sdkman"
