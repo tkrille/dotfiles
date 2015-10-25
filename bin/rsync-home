@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 
-rsync -r -t -p -o -g -x --exclude Archive/ --exclude Media/ --exclude Public/ --exclude .cache/ --exclude .gvfs/ --exclude .android/ --progress --delete -l --partial --numeric-ids -s /home/thomas/ /media/thomas/ext-secure/thomas/
+rsync -r -t -p -o -g -x --exclude Archive/ --exclude Media/ --exclude Public/ --exclude .cache/ --exclude .gvfs/ --exclude .android/ --progress --delete -l --partial --numeric-ids -s /home/thomas/ /run/media/thomas/ext-secure/thomas/
 
 sync
 
