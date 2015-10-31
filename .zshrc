@@ -90,6 +90,7 @@ preexec () {
 if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
+  export GOPATH=$HOME/Source/Go
 fi
 
 export DOCKER_HOST=tcp://localhost:2376
