@@ -15,6 +15,10 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+if has("autocmd")
+  autocmd Filetype gitcommit setlocal spell textwidth=72
+endif
+
 set showcmd
 set showmatch
 set ignorecase
