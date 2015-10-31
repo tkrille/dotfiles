@@ -91,6 +91,7 @@ if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
   export GOPATH=$HOME/Source/Go
+  export PATH=$GOPATH/bin:$PATH
 fi
 
 export DOCKER_HOST=tcp://localhost:2376
