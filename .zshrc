@@ -89,7 +89,8 @@ fi
 
 export DOCKER_HOST=tcp://localhost:2376
 export DOCKER_TLS_VERIFY=1
-alias cleanup-docker='docker volume rm $(docker volume ls --filter dangling=true -q); docker rmi -f $(docker images --filter dangling=true -q)'
+alias docker-stop='docker rm -fv $(docker ps -aq)'
+alias docker-clean='docker volume rm $(docker volume ls --filter dangling=true -q); docker rmi -f $(docker images --filter dangling=true -q)'
 
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
