@@ -52,28 +52,19 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
-# export EDITOR=nano
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
+export EDITOR='vim'
 export MANWIDTH=${MANWIDTH:-80}
-
 export LESS="-diMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
 
 alias cd..="cd .."
 alias ll="ls -hl"
 alias jjs="rlwrap jjs"
-
 alias xps='ps aucx | head -1; ps aucx | grep -i '
+alias o=xdg-open
+alias c='xclip -selection c'
+alias i='sudo dnf install'
+alias vi=vim
+alias up='sudo dnf clean all && sudo dnf upgrade -y'
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
@@ -93,6 +84,8 @@ if [ -d "$HOME/opt/go" ]; then
   export GOPATH=$HOME/Source/Go
   export PATH=$GOPATH/bin:$PATH
 fi
+
+# Docker stuff
 
 export DOCKER_HOST=tcp://localhost:2376
 export DOCKER_TLS_VERIFY=1
