@@ -65,6 +65,7 @@ alias c='xclip -selection c'
 alias i='sudo dnf install'
 alias vi=vim
 alias up='sudo dnf clean all && sudo dnf upgrade -y'
+alias rm=trash
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
