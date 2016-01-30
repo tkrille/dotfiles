@@ -34,9 +34,6 @@ com_crashlytics_export_strings.xml
 
 # Created by http://www.gitignore.io
 
-### Java ###
-*.class
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
