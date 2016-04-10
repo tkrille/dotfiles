@@ -1,3 +1,0 @@
-#!/bin/bash
-
-rsync -r -t -p -o -g -x --progress --delete -l --partial --numeric-ids -s /mnt/xqf23/home/thomas/ /home/thomas/
