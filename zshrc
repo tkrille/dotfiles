@@ -65,6 +65,9 @@ alias c='xclip -selection c'
 alias i='sudo dnf install'
 alias vi=vim
 alias up='sudo dnf clean all && sudo dnf upgrade -y'
+alias gw=./gradlew
+alias v=vagrant
+alias gpg=gpg2
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
@@ -96,6 +99,8 @@ alias d=docker
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
+
+eval "$(direnv hook zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/thomas/.sdkman"
