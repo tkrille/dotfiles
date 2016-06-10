@@ -97,10 +97,6 @@ alias docker-stop='docker rm -fv $(docker ps -aq)'
 alias docker-clean='docker volume rm $(docker volume ls --filter dangling=true -q); docker rmi -f $(docker images --filter dangling=true -q)'
 alias d=docker
 
-if [ -f ~/.zshrc.local ]; then
-    source ~/.zshrc.local
-fi
-
 eval "$(direnv hook zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
