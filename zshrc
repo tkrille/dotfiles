@@ -80,6 +80,8 @@ preexec () {
   echo -e "\033[1A\033[${C}C ${DATE} "
 }
 
+# Golang
+
 if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
