@@ -72,8 +72,7 @@ alias gpg=gpg2
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# print datetime on command exec
 
 preexec () {
   DATE=`date +"%H:%M:%S on %Y-%m-%d"`
