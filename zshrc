@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export EDITOR='vim'
+export EDITOR='vimx'
 export MANWIDTH=${MANWIDTH:-80}
 export LESS="-diMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
 
@@ -63,7 +63,7 @@ alias xps='ps aux | head -1; ps aux | grep -i '
 alias o=xdg-open
 alias c='xclip -selection c'
 alias i='sudo dnf install'
-alias vi=vim
+alias vi=vimx
 alias up='sudo dnf clean all && sudo dnf upgrade -y'
 alias gw=./gradlew
 alias v=vagrant
