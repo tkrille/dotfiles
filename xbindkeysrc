@@ -1,0 +1,5 @@
+"xdotool click 4"   # Scroll Up
+c:185
+
+"xdotool click 5"   # Scroll Down
+c:186
