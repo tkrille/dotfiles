@@ -11,8 +11,8 @@
     ci = commit
     br = branch
     co = checkout
-    fcum = "!git fetch origin; git checkout -B master upstream/master"
-    fcom = "!git fetch upstream; git checkout -B master origin/master"
+    fcum = "!git fetch upstream; git checkout -B master upstream/master"
+    fcom = "!git fetch origin; git checkout -B master origin/master"
     s = stash
     sp = stash pop
     df = diff
