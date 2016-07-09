@@ -51,6 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+HISTFILE=~/Documents/zsh_history
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR='vimx'
 export MANWIDTH=${MANWIDTH:-80}
