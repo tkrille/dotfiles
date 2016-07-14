@@ -1,0 +1,4 @@
+set surround
+set showmatch
+set ignorecase
+set smartcase
