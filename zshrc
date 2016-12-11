@@ -101,6 +101,8 @@ alias doco=docker-compose
 
 eval "$(direnv hook zsh)"
 
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/thomas/.sdkman"
 [[ -s "/home/thomas/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thomas/.sdkman/bin/sdkman-init.sh"
