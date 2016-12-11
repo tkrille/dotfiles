@@ -30,6 +30,7 @@
     uncommit = reset HEAD^
     cane  = commit --all --amend --no-edit
     yolo  = "!git cane && git push --force"
+    rau = remote add upstream
 [color]
     ui = auto
 [color "branch"]
