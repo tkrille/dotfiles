@@ -31,6 +31,8 @@
     cane  = commit --all --amend --no-edit
     yolo  = "!git cane && git push --force"
     rau = remote add upstream
+    merge-mr = !sh -c 'git checkout -B merge-request-$1 && git fetch upstream merge-requests/$1/head && git merge --no-ff FETCH_HEAD' --
+    checkout-mr = !sh -c 'git fetch upstream merge-requests/$1/head && git checkout -B merge-request-$1 FETCH_HEAD' --
 [color]
     ui = auto
 [color "branch"]
