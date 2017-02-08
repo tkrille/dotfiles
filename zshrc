@@ -56,6 +56,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR='vimx'
 export MANWIDTH=${MANWIDTH:-80}
 export LESS="-diMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
+export CC=gcc
 
 alias cd..="cd .."
 alias ll="ls -hl"
