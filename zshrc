@@ -100,6 +100,7 @@ alias docker-clean-images='docker rmi -f $(docker images --filter dangling=true 
 alias docker-clean-volumes='docker volume rm $(docker volume ls --filter dangling=true -q)'
 alias d=docker
 alias doco=docker-compose
+alias dm=docker-machine
 
 eval "$(direnv hook zsh)"
 
