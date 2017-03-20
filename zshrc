@@ -102,6 +102,9 @@ alias d=docker
 alias doco=docker-compose
 alias dm=docker-machine
 
+# K8S
+source <(kubectl completion zsh)
+
 eval "$(direnv hook zsh)"
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
