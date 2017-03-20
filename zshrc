@@ -50,7 +50,6 @@ plugins=(git github hub autojump mvn gradle command-not-found common-aliases cp 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 HISTFILE=~/Documents/zsh_history
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR='vimx'
@@ -75,7 +74,6 @@ bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
 
 # print datetime on command exec
-
 preexec () {
   DATE=`date +"%H:%M:%S on %Y-%m-%d"`
   C=$(($COLUMNS-24))
@@ -83,7 +81,6 @@ preexec () {
 }
 
 # Golang
-
 if [ -d "$HOME/opt/go" ]; then
   export GOROOT=$HOME/opt/go
   export PATH=$PATH:$GOROOT/bin
@@ -92,7 +89,6 @@ if [ -d "$HOME/opt/go" ]; then
 fi
 
 # Docker stuff
-
 export DOCKER_HOST=tcp://localhost:2376
 export DOCKER_TLS_VERIFY=1
 alias docker-stop='docker rm -fv $(docker ps -aq)'
