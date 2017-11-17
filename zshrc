@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=~/Documents/zsh_history
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export EDITOR='vimx'
-export MANWIDTH=${MANWIDTH:-80}
+export MANWIDTH=${MANWIDTH:-120}
 export LESS="-diMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
 export CC=gcc
 
