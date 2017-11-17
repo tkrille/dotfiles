@@ -91,9 +91,6 @@ if [ -d "$HOME/opt/go" ]; then
 fi
 
 # Docker stuff
-export DOCKER_HOST=tcp://localhost:2376
-export DOCKER_CERT_PATH=~/.docker
-export DOCKER_TLS_VERIFY=1
 alias docker-stop='docker rm -fv $(docker ps -aq)'
 alias docker-clean-images='docker rmi -f $(docker images --filter dangling=true -q)'
 alias docker-clean-volumes='docker volume rm $(docker volume ls --filter dangling=true -q)'
