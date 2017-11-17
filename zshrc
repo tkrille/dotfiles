@@ -69,6 +69,8 @@ alias up='pushd -q ~/Source/Private/infra-ansible ; ansible-playbook --diff --as
 alias gw=./gradlew
 alias v=vagrant
 alias gpg=gpg2
+alias http='http --pretty=all'
+alias https='http --default-scheme=https --pretty=all'
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
