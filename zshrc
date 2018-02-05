@@ -101,6 +101,9 @@ alias dm=docker-machine
 # Minikube
 source <(minikube completion zsh)
 
+# GCloud SDK
+source /usr/share/google-cloud-sdk/completion.zsh.inc
+
 # direnv
 eval "$(direnv hook zsh)"
 
