@@ -98,6 +98,9 @@ alias d=docker
 alias doco=docker-compose
 alias dm=docker-machine
 
+# Minikube
+source <(minikube completion zsh)
+
 # direnv
 eval "$(direnv hook zsh)"
 
