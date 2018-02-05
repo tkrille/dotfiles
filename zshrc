@@ -90,7 +90,7 @@ if [ -d "$HOME/opt/go" ]; then
   export PATH=$GOPATH/bin:$PATH
 fi
 
-# Docker stuff
+# Docker
 alias docker-stop='docker rm -fv $(docker ps -aq)'
 alias docker-clean-images='docker rmi -f $(docker images --filter dangling=true -q)'
 alias docker-clean-volumes='docker volume rm $(docker volume ls --filter dangling=true -q)'
@@ -98,8 +98,10 @@ alias d=docker
 alias doco=docker-compose
 alias dm=docker-machine
 
+# direnv
 eval "$(direnv hook zsh)"
 
+# Vagrant
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
