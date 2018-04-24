@@ -98,6 +98,9 @@ alias d=docker
 alias doco=docker-compose
 alias dm=docker-machine
 
+# Kubernetes
+alias kaf='kubectl apply -f'
+
 # Minikube
 source <(minikube completion zsh)
 
