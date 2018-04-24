@@ -104,6 +104,9 @@ alias kaf='kubectl apply -f'
 # Minikube
 source <(minikube completion zsh)
 
+# Helm
+source <(helm completion zsh)
+
 # GCloud SDK
 source /usr/share/google-cloud-sdk/completion.zsh.inc
 
