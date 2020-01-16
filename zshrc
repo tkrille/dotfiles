@@ -40,12 +40,15 @@ ZSH_THEME="afowler"
 # Uncomment following line if you want to  shown in the command execution time stamp 
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
+
+# AWS
+SHOW_AWS_PROMPT=false
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github hub autojump mvn gradle command-not-found common-aliases cp extract gitignore sudo themes systemadmin vagrant docker docker-machine rsync python pip docker-compose systemd spring kubectl)
+plugins=(git github hub autojump mvn gradle command-not-found common-aliases cp extract gitignore sudo themes systemadmin docker docker-machine rsync python pip docker-compose systemd spring kubectl aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +59,7 @@ export EDITOR='vimx'
 export MANWIDTH=${MANWIDTH:-120}
 export LESS="-diMRSX -P?fFile %f:stdin. ?m(%i of %m) :.line %l ?Lof %L:.?p (%p\%):."
 export CC=gcc
+export JAVA_HOME="/usr/lib/jvm/java"
 
 alias cd..="cd .."
 alias ll="ls -hl"
@@ -65,12 +69,15 @@ alias o=xdg-open
 alias c='xclip -selection c'
 alias i='sudo dnf install'
 alias vi=vimx
+alias ap='ansible-playbook'
 alias up='pushd -q ~/Source/Private/infra-ansible ; ansible-playbook --diff --ask-become-pass site.yml ; popd -q'
 alias gw=./gradlew
-alias v=vagrant
 alias gpg=gpg2
 alias http='http --pretty=all'
 alias https='http --default-scheme=https --pretty=all'
+alias dmesg='dmesg --human --follow'
+alias df='df -h'
+alias uptime='uptime --since'
 
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
@@ -102,20 +109,21 @@ alias dm=docker-machine
 alias kaf='kubectl apply -f'
 
 # Minikube
-source <(minikube completion zsh)
+# source <(env MINIKUBE_WANTUPDATENOTIFICATION=false minikube completion zsh)
 
 # Helm
-source <(helm completion zsh)
+# source <(helm completion zsh)
 
 # GCloud SDK
-source /usr/share/google-cloud-sdk/completion.zsh.inc
+# source /usr/share/google-cloud-sdk/completion.zsh.inc
 
 # direnv
 eval "$(direnv hook zsh)"
 
-# Vagrant
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/thomas/.sdkman"
 [[ -s "/home/thomas/.sdkman/bin/sdkman-init.sh" ]] && source "/home/thomas/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
